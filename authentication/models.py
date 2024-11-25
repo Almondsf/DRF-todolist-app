@@ -1,9 +1,12 @@
+from django.apps import apps
 from django.db import models
 from helpers.models import TrackingModel
 from django.contrib.auth.models import (PermissionsMixin, UserManager, AbstractBaseUser)
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
+from django.contrib.auth.hashers import make_password
+
 # Create your models here.
 
 class MyUserManager(UserManager):
