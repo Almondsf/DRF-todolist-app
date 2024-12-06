@@ -16,6 +16,7 @@ class AuthUserAPIView(GenericAPIView):
         return response.Response({'user':serializer.data})
 
 class RegisterAPIView(GenericAPIView):
+    authentication_classes = []
     
     serializer_class=RegisterSerializer
     
@@ -29,6 +30,7 @@ class RegisterAPIView(GenericAPIView):
     
 
 class LoginAPIView(GenericAPIView):
+    authentication_classes = []
     
     serializer_class=LoginSerializer
     
